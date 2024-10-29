@@ -5,15 +5,15 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @ToString
-public class NewBlogPost {
-    private String categoria;
-    private String titolo;
-    private String contenuto;
-    private LocalDateTime tempoDiLettura;
+public class NewAutorePayload {
+    private String nome;
+    private String cognome;
+    private String email;
+    private LocalDate dataDiNascita;
 }
