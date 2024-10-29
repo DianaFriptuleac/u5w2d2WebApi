@@ -1,7 +1,6 @@
 package dianafriptuleac.u5w2d2WebApi.services;
 
 import dianafriptuleac.u5w2d2WebApi.entities.Autore;
-import dianafriptuleac.u5w2d2WebApi.entities.BlogPost;
 import dianafriptuleac.u5w2d2WebApi.exceptions.NotFoundException;
 import dianafriptuleac.u5w2d2WebApi.payloads.NewAutorePayload;
 import org.springframework.stereotype.Service;
@@ -34,7 +33,7 @@ public class AutoreService {
                 orElseThrow(() -> new NotFoundException(autoreId));
     }
 
-    //Trova autore per id and update
+    //Trovo autore per id and update
     public Autore findAutoreByIdAndUpdate(long autoreId, NewAutorePayload body) {
         return this.autoriList.stream().filter(autore -> autore.getId() == autoreId).findFirst().map(autore ->
         {

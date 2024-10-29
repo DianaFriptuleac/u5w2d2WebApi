@@ -16,14 +16,12 @@ public class AutoreController {
     private AutoreService autoreService;
 
     //1.Get http://localhost:3002/autori
-
     @GetMapping
     public List<Autore> getAutore() {
         return this.autoreService.findAllAutori();
     }
 
     //2. Post http://localhost:3002/autori = payload
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Autore createAutore(@RequestBody NewAutorePayload body) {

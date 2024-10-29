@@ -22,7 +22,7 @@ public class BlogPost {
         this.titolo = titolo;
         this.contenuto = contenuto;
         this.tempoDiLettura = tempoDiLettura;
-        this.cover = "https://picsum.photos/200/300";
+      
     }
 
 }
