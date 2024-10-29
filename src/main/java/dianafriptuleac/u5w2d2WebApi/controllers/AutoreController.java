@@ -29,4 +29,24 @@ public class AutoreController {
     public Autore createAutore(@RequestBody NewAutorePayload body) {
         return this.autoreService.saveAutore(body);
     }
+
+    //3. Get http://localhost:3002/autori/{autoreId}
+    @GetMapping("/{autoreId}")
+    public Autore findAutoreById(@PathVariable long autoreId) {
+        return this.autoreService.findAutoreById(autoreId);
+    }
+
+    //4. PUT http://localhost:3002/autori/{autoreId} + (payload)
+    @PutMapping("/{autoreId}")
+    public Autore findAutoreAndUpdate(@PathVariable long autoreId, @RequestBody NewAutorePayload body) {
+        return this.autoreService.findAutoreByIdAndUpdate(autoreId, body);
+    }
+
+
+    //5.DELETE http://localhost:3002/autori/{autoreId}
+    @DeleteMapping("/{autoreId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void findAutoreAndDelete(@PathVariable long autoreId) {
+        this.autoreService.findByIdAutoreAndDelete(autoreId);
+    }
 }
